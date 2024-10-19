@@ -7,7 +7,7 @@ def parcial_ez_pz():
     lista = []
     
     while True:
-        menu = get_int("Bienvenido al parcial Sr. Benitez/Corsaro. Seleccione que punto del examen quiere probar primero: \n [1] Generar lista de números aleatorios \n [2] Ordenar la lista de numeros generada amteriormente. \n [3] Buscar números en rango. \n [4] Obtener número máximo y mínimo del item anterior. \n [5] Generar matriz de caracteres alfanuméricos, utilizando la función desarrollada en el punto 2.")
+        menu = get_int("Bienvenido al parcial Sr. Benitez/Corsaro. Seleccione que punto del examen quiere probar primero: \n [1] Generar lista de números aleatorios \n [2] Ordenar la lista de numeros generada amteriormente. \n [3] Buscar números en rango. \n [4] Obtener número máximo y mínimo del item anterior. \n [5] Generar matriz de caracteres alfanuméricos, utilizando la función desarrollada en el punto 2. \n[6] Salir del programa.")
         
         match menu:
             case 1:
@@ -29,6 +29,7 @@ def parcial_ez_pz():
                 generar_una_matriz(lista)
                 print(imprimir_matriz(generar_una_matriz))
             case 6:
+                print('Hasta la proczimaaaaaaaaaaaa!')
                 break
             
 parcial_ez_pz()
