@@ -1,60 +1,46 @@
-def valor_max(lista) -> list|int:
-    max = float("-inf")                                                         
-    
+def dar_max(lista):
+    maximo = float("-inf")                                                          
     for i in range(len(lista)):                 
-        if lista[i] > max:
-            max = lista[i] 
-             
-    return max   
+        if lista[i] > maximo:
+            maximo = lista[i]  
+    return maximo   
 
-def valor_min(lista):
-    min = float("inf")                                                         
-    
+def dar_min(lista):
+    minimo = float("inf")                                                         
     for i in range(len(lista)):                 
-        if lista[i] < min:
-            min = lista[i] 
-             
-    return min  
+        if lista[i] < minimo:
+            minimo = lista[i] 
+        
+    return minimo
 
-def lista_string(lista):
+def lista_str(lista):
     string = ""
     for i in range(len(lista)):
         string += lista[i]
     return string
 
-def print_all(lista) -> list:
+def printear_todo(lista) -> list:
     for i in range(len(lista)):
         print(lista[i])
 
 def validar_lista(lista):
     return lista != []
 
-def validar_lista_existente(lista):
+def validar_lista_creada(lista):
     if validar_lista(lista):
         return True
     else:
-        print("\n Error, antes de realizar esta acción tiene que iniciar la lista (elegir la opción 1) \n")
+        print("\n Error, antes de hacer esto tenés que iniciar la lista (seleccionar opción 1) \n")
         return False
 
 
-def rango(cota_inf,cota_sup,lista):
-    lista_nueva = []
+def calcular_rango(parte_inf, parte_sup, lista):
+    lista_nueva = [] #inicializa la lista donde va a ir an
     for i in range(len(lista)):
-        if cota_inf <= lista[i] <= cota_sup:
+        if parte_inf <= lista[i] <= parte_sup:
             lista_nueva += [lista[i]]
     if validar_lista(lista_nueva):
         return lista_nueva
     else:
-        return "No hay numeros en ese rango"
+        return "no hay numeros en ese rango"
 
-'''        
-3. Buscar cuántos números están en un rango dado: Solicitar al usuario que ingrese un rango (por ejemplo, entre 10 y 50) e informar cuántos números de la lista generada en el punto 1 caen dentro de dicho rango.
-
-1) recorra la lista verificando si el numero en el que estoy parado pertenece al rango
-2) los numeros que pertenecen los quiero en una nueva lista
-
-lista = [1,2,3,4,5,6]
-rango(2,5,lista)
-
-3) RDO: [2,3,4,5]
-'''
